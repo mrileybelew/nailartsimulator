@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NailArtSimulator</title>
+<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>NailArtSimulator</h1>
+    <p class="subtitle">Create your own custom virtual nail set! Choose a shape, color(s), and design accent nails &lt;3 </p>
+  </header>
+
+  <main class="app">
+    <!-- LEFT SIDE: CONTROLS -->
+    <section class="controls">
+      <h2>Design Controls</h2>
+
+      <!-- Shape selection -->
+      <label>
+        Nail Shape:
+        <select id="shapeSelect">
+          <option value="square">Square</option>
+          <option value="coffin">Coffin</option>
+          <option value="almond">Almond</option>
+          <option value="stiletto">Stiletto</option>
+          <option value="duck">Duck</option>
+        </select>
+      </label>
+
+      <!-- Optional style name -->
+      <label>
+        Style Name (optional):
+        <input type="text" id="styleName" placeholder="e.g., Barbie Dream, Fall Vibes">
+      </label>
+
+      <!-- Colors -->
+      <label>
+        Base Color:
+        <input type="color" id="baseColor" value="#ff80b3">
+      </label>
+
+      <label>
+        Accent Color:
+        <input type="color" id="accentColor" value="#ffffff">
+      </label>
+
+      <!-- Nail art style -->
+      <label>
+        Nail Art Style:
+        <select id="styleSelect">
+          <option value="solid">Solid</option>
+          <option value="glitter">Glitter</option>
+          <option value="gradient">Gradient</option>
+          <option value="stripes">Stripes</option>
+          <option value="dots">Dots</option>
+          <option value="french">French Tip</option>
+        </select>
+      </label>
+
+      <!-- Accent nail choices -->
+      <fieldset class="accent-group">
+        <legend>Accent Nails (choose any fingers)</legend>
+
+        <label>
+          <input type="checkbox" class="accent-checkbox" value="pinky">
+          Pinky
+        </label>
+
+        <label>
+          <input type="checkbox" class="accent-checkbox" value="ring" checked>
+          Ring
+        </label>
+
+        <label>
+          <input type="checkbox" class="accent-checkbox" value="middle">
+          Middle
+        </label>
+
+        <label>
+          <input type="checkbox" class="accent-checkbox" value="index">
+          Index
+        </label>
+
+        <label>
+          <input type="checkbox" class="accent-checkbox" value="thumb">
+          Thumb
+        </label>
+      </fieldset>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button id="generateBtn" type="button">Generate Nail Set</button>
+        <button id="randomBtn" type="button">Random Design</button>
+          <button id="saveBtn" type="button">Save Design</button>
+
+      </div>
+
+      <p id="designDescription" class="description">
+        Choose your options and click "Generate Nail Set" to see your preview.
+      </p>
+    </section>
+
+    <!-- RIGHT SIDE: PREVIEW -->
+    <section class="preview">
+      <h2>Preview Area</h2>
+      <p class="preview-hint">
+        The card below shows a set of nails on a hand based on your design choices.
+      </p>
+      <div id="previewContainer" class="preview-container">
+        <!-- JS will insert the hand + nails here -->
+      </div>
+    </section>
+    
+        <!-- SAVED DESIGNS -->
+    <section class="saved">
+      <h2>Saved Designs</h2>
+      <p class="preview-hint">
+        Click a saved design to load it back into the controls.
+      </p>
+      <div id="savedContainer" class="saved-container">
+        <!-- Saved designs will appear here -->
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CS111 Final Project – NailArtSimulator by Maiti Riley-Belew</p>
+  </footer>
+</body>
+</html>
